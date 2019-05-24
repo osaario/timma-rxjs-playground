@@ -6,6 +6,7 @@ import { GetExample } from "../Panels/GetExample"
 import React from "react"
 import { ConstantExample } from "../Panels/ConstantExample"
 import { RefreshExample } from "../Panels/RefreshExample"
+import { ControlledExample } from "../Panels/ControlledExample"
 
 export const DecSection = () => (
   <Container fluid>
@@ -15,6 +16,9 @@ export const DecSection = () => (
       </Col>
       <Col xs={6}>
         <RefreshExample />
+      </Col>
+      <Col xs={6}>
+        <ControlledExample />
       </Col>
     </Row>
   </Container>
