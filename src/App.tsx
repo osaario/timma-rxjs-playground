@@ -4,6 +4,7 @@ import "./App.css"
 import { Navbar, Nav, Row, Col, Container } from "react-bootstrap"
 import { MapExample } from "./Panels/MapExample"
 import { TimerExample } from "./Panels/TimerExample"
+import { GetExample } from "./Panels/GetExample"
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           </Col>
           <Col xs={4}>
             <MapExample />
+          </Col>
+          <Col xs={4}>
+            <GetExample />
           </Col>
         </Row>
       </Container>
