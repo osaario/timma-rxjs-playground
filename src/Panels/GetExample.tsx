@@ -23,7 +23,12 @@ export class GetExample extends React.Component<{}, { salons: Salon[] | null }> 
           <div>
             <b>
               {this.state.salons ? (
-                this.state.salons!.map(({ name }) => <span>{name}, </span>)
+                this.state.salons!.slice(0, 5).map(({ name }, idx) => (
+                  <span>
+                    {name}
+                    {idx === 4 ? "..." : ", "}
+                  </span>
+                ))
               ) : (
                 <span>No values yet</span>
               )}

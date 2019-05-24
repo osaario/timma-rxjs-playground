@@ -5,6 +5,7 @@ import { Navbar, Nav, Row, Col, Container } from "react-bootstrap"
 import { MapExample } from "./Panels/MapExample"
 import { TimerExample } from "./Panels/TimerExample"
 import { GetExample } from "./Panels/GetExample"
+import { FilterExample } from "./Panels/FilterExample"
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
             <MapExample />
           </Col>
           <Col xs={4}>
+            <FilterExample />
+          </Col>
+          <Col className="my-3" xs={4}>
             <GetExample />
           </Col>
         </Row>
