@@ -10,8 +10,8 @@ export class TimerExample extends React.Component<{}, { time: number }> {
         <Card.Body>
           <h2>Simple timer</h2>
           <p>Just a simple stream of values</p>
-          <pre className="bg-light p-4">
-            <code>{`Observable.interval(1000)`}</code>
+          <pre className="bg-light px-2 py-3">
+            <code className="prettyprint">{`Observable.interval(1000)`}</code>
           </pre>
           <div>
             <b>{this.state.time}</b>

@@ -13,8 +13,8 @@ export class ConstantExample extends React.Component {
         <Card.Body>
           <h2>GET request with Constant</h2>
           <p>Same exact functionality as the get example in the first tab, now with Constant</p>
-          <pre className="bg-light p-4 pre-scrollable">
-            <code>{`
+          <pre className="bg-light px-2 py-3 pre-scrollable">
+            <code className="prettyprint">{`
 <Constant
     placeholder={() => (
     <div>

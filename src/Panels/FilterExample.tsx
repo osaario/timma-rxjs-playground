@@ -10,8 +10,8 @@ export class FilterExample extends React.Component<{}, { time: number }> {
         <Card.Body>
           <h2>Timer with filter</h2>
           <p>Only even numbers stream</p>
-          <pre className="bg-light p-4">
-            <code>{`Observable.interval(1000)
+          <pre className="bg-light px-2 py-3">
+            <code className="prettyprint">{`Observable.interval(1000)
                     .filter(v => !(v % 2))`}</code>
           </pre>
           <div>

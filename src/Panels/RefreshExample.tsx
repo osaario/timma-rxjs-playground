@@ -17,8 +17,8 @@ export class RefreshExample extends React.Component {
         <Card.Body>
           <h2>Refresh functionality with Variable</h2>
           <p>Added refresh functionality by using Variable</p>
-          <pre className="bg-light p-4 pre-scrollable">
-            <code>{`
+          <pre className="bg-light px-2 py-3 pre-scrollable">
+            <code className="prettyprint">{`
 <Variable
 placeholder={() => (
     <div>

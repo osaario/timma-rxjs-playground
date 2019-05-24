@@ -10,8 +10,8 @@ export class MapExample extends React.Component<{}, { text: string }> {
         <Card.Body>
           <h2>Timer with map</h2>
           <p>Same counter stream with map</p>
-          <pre className="bg-light p-4">
-            <code>{`Observable.interval(1000).map(count => "Timer has counted to: " + count)`}</code>
+          <pre className="bg-light px-2 py-3">
+            <code className="prettyprint">{`Observable.interval(1000).map(count => "Timer has counted to: " + count)`}</code>
           </pre>
           <div>
             <b>{this.state.text}</b>

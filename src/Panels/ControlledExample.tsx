@@ -17,8 +17,8 @@ export class ControlledExample extends React.Component {
               <Fragment>
                 <h2>"Search pattern"</h2>
                 <p>
-                  Trigger new load with parameter change with <code>Controlled</code>. Use <code>controlKey</code> to
-                  trigger new load when serviceId changes
+                  Trigger new load with parameter change with <code className="prettyprint">Controlled</code>. Use{" "}
+                  <code className="prettyprint">controlKey</code> to trigger new load when serviceId changes
                 </p>
                 <Form.Group>
                   <Form.Label>Service id</Form.Label>
@@ -34,8 +34,33 @@ export class ControlledExample extends React.Component {
                     <option value={"103"}>103</option>
                   </Form.Control>
                 </Form.Group>
-                <pre className="bg-light p-4 pre-scrollable">
-                  <code>{`
+                <pre className="bg-light px-2 py-3 pre-scrollable">
+                  <code className="prettyprint">{`
+<Controlled
+controlKey={serviceId}
+debounceTime={300}
+placeholder={() => (
+  <div>
+    <b>No values yet</b>
+  </div>
+)}
+value={Async.GET<Salon[]>(
+  ${"`https://timma.fi/api/serviceslots/timmaproviders/v2?serviceId=${serviceId}&n=60.172452088029026&w=24.928229601531257&s=60.16056037498048&e=24.945266993193854&days=0,1,2,3&times=0,1,2,3,4&country=FI&lang=en`"}
+)}
+>
+{(salons, progress) => (
+  <div style={{ opacity: progress === Async.Progress.Progressing ? 0.5 : 1 }}>
+    <b>
+      {salons.slice(0, 5).map(({ name }, idx) => (
+        <span>
+          {name}
+          {idx === 4 ? "..." : ", "}
+        </span>
+      ))}
+    </b>
+  </div>
+)}
+</Controlled>
             `}</code>
                 </pre>
                 <Controlled
